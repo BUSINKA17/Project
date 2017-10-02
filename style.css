@@ -1,0 +1,100 @@
+* {
+  box-sizing:border-box;
+}
+body {
+ font-family:  'Roboto', sans-serif;
+ font-size: 18px;
+ color: #161616;
+}
+
+/* эксперимент с position */
+ .position-parent {
+   width: 200px;
+   height: 300px;
+   background: pink;
+   position: relative;
+   margin: 50px;
+ }
+
+  .position-child {
+  height: 300px;
+  background: violet;
+  position: relative;
+  left: 100px;
+  top: 100px;
+  }
+
+  .position-child-absolute {
+   width: 100px;
+   height: 300px;
+   background: grey;
+   position: absolute;
+   left: 100px;
+   top: 100px;
+ }
+ .position-child-fixed {
+   width: 100px;
+   height: 300px;
+   background: aqua;
+   position: fixed;
+   right: 100px;
+   top: 100px;
+ }
+
+ .position-child-z-index {
+  width: 100px;
+  height: 300px;
+  background: purple;
+  position: absolute;
+
+ }
+
+ .z-index-1 {
+ left: 50px;
+ top: 50px;
+ background: red;
+ opacity: .5;
+ z-index: 3;
+ }
+
+ .z-index-2 {
+  left: 100px;
+  top: 100px;
+  background: green;
+  opacity: .3;
+  z-index: 2;
+ }
+ .z-index-3 {
+   left: 150px;
+   top: 150px;
+   background: blue;
+   opacity: .1;
+   z-index: 1;
+ }
+
+
+.font {
+  padding: 100px 0;
+}
+
+.font-size {
+  font-size: 30px;
+
+}
+
+.font-style {
+    font-style: italic ;
+}
+
+.font-weight {
+  font-weight: 700px;
+}
+
+.font-variant {
+  font-variant: small-caps;
+}
+
+
+.text-shadow {
+  text-shadow: 5px 5px 1px; rgey;
+}
