@@ -1,12 +1,22 @@
+@import url("grid.css");
+
+/* –––––––– COMMON STYLES –––––––––  */
 * {
   box-sizing: border-box;
+}
 
-}
 body {
- font-family:  'Roboto', sans-serif;
+ font-family:  'PT Sans', Arial, Helvetica, sans-serif;
  font-size: 18px;
- color: Sienna;
+ padding: 0;
+ margin: 0;
+
+  /* design */
+  color: Sienna;
+  background-image: linear-gradient(to bottom, rgba(244,250,255,0) 0%, rgb(162, 213, 255) 100%);
 }
+
+
 
 /* эксперимент с position */
  .position-parent {
@@ -16,8 +26,7 @@ body {
    position: fixed;
    margin-left: 3px;
    margin-right: 3px;
-
- }
+  }
 
   .position-child {
   height: 50px;
@@ -25,9 +34,7 @@ body {
   position: absolute;
   top: 30px;
   left: 75%;
-
-  }
-
+}
   .position-child-absolute {
    width: 100px;
    height: 300px;
@@ -76,7 +83,6 @@ body {
    z-index: 1;
  }
 
-
 .font {
   padding: 100px 0;
 }
@@ -88,7 +94,6 @@ body {
 
 .font-style {
     font-style: italic;
-
 }
 
 .font-weight {
@@ -107,7 +112,7 @@ body {
 }
 
 
-article {
+.article {
   width: 700px;
   height: 250px;
   padding: 20px;
@@ -136,12 +141,10 @@ a {
 #article-2 {
   margin-top: 50px;
 }
-
-main {
+.main {
   padding-bottom: 1000px;
   padding-top: 100px;
 }
-
 h2 {
   color: #9ACD32;
 }
@@ -336,7 +339,6 @@ h2 {
   background-image: radial-gradient(ellipse at center, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
   margin: 50px;
 }
-
 
 
 /* box-shadow */
@@ -534,4 +536,205 @@ box-shadow: inset 0 0 15px 0 rgba(0, 0, 0,.8);
 .transition-left:hover {
   left: 200px;
   width: 400px;
+}
+
+
+
+/* transform: translate */
+.transform-parent {
+  display: flex;
+  margin: 50px;
+}
+
+.translate-parent {
+  width: 300px;
+  height: 200px;
+  background-color: gray;
+  margin: 100px;
+  position: relative;
+}
+
+.translate-child {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.translate-child-1 {
+  transform: translate(100px, 100px);
+}
+
+.translate-child-2 {
+  transform: translate(-50px, -80px);
+}
+
+/* transform: rotate */
+.rotate-parent {
+  width: 300px;
+  height: 200px;
+  background-color: gray;
+  margin: 100px;
+  position: relative;
+}
+
+.rotate-child {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rotate-child-1 {
+  transform: rotate(100deg);
+}
+
+.rotate-child-2 {
+  transform: rotate(-30deg);
+}
+
+
+/* transform: scale */
+.scale-parent {
+  width: 300px;
+  height: 200px;
+  background-color: gray;
+  margin: 100px;
+  position: relative;
+}
+
+.scale-child {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.scale-child-1 {
+  transform: scale(2.5);
+}
+
+.scale-child-2 {
+  font-size: 50px;
+  transform: scale(-1, 0.5);
+}
+
+
+/* transform: skew */
+.skew-parent {
+  width: 300px;
+  height: 200px;
+  background-color: gray;
+  margin: 100px;
+  position: relative;
+}
+
+.skew-child {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skew-child-1 {
+ transform: skew(-60deg);
+}
+
+.skew-child-2 {
+ transform: skew(-10deg, 50deg);
+}
+
+
+/* transform-origin */
+.transform-origin-parent {
+  width: 300px;
+  height: 200px;
+  background-color: gray;
+  margin: 100px;
+  position: relative;
+}
+
+.transform-origin-child {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 50%;
+}
+
+
+/* -- animation --*/
+.animation-1 {
+  width: 300px;
+  height: 300px;
+  background-color: violet;
+  border: 2px dashed gray;
+  animation-name: animation-bg-color;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+
+.animation-1:hover {
+  animation-play-state: paused;
+}
+
+@keyframes animation-bg-color {
+  from {
+    background-color: yellow;
+    transform: translate(0,0);
+    width: 300px;
+    box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.5);
+  }
+
+  to {
+    background-color: #00FF00;
+    transform: translate(200px,300px);
+    width: 500px;
+    box-shadow: 0 0 50px 50px rgba(255, 225, 225, .5);
+  }
+}
+
+
+.animation-2 {
+  height: 150px;
+  width: 150px;
+  background-color: orange;
+  opacity: 0.8;
+  animation-name: animation-rotate;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  margin: 50px;
+}
+
+@keyframes animation-rotate {
+  0% {
+  transform: rotate(0);
+  }
+
+  50% {
+  transform: rotate(-90deg);
+  }
+
+  100% {
+  transform: rotate(360deg);
+  }
 }
