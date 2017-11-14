@@ -1,68 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <!-- главный заголовок сайта -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Article2</title>
-  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet"href="style.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- главный заголовок сайта -->
+    <title>Busin</title>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-     <!-- здесь будет тело документа -->
-   <header>
-       <div class="position-parent"><h1 class="text-shadow">Бусинка</h1>
-       <div class="position-child"><nav>
-          <a href="index.html">Главная</a>
-          <a href="contacts.html">Контакты</a>
-          <a href="article.html">Статья</a></div>
+
+    <div class="grid-container">
+
+      <!-- header документа -->
+      <header class="header">
+        <!-- заголовок обернут в ссылку, чтобы при клике на него всегда можно было вернуться на главную, это очень частый use-case -->
+        <a href="index.html" class="header__link">
+          <h1 class="header__heading">Kate Sava</h1>
+        </a>
+
+        <!-- мобильное меню: при клике открывается особым образом спрятанный див "header__nav" (см. стили) -->
+        <div class="header__mobile-menu" id="js-mobile-menu">
+          <div class="header__mobile-menu-icon"></div>
+        </div>
+
+        <nav class="header__nav">
+          <div class="header__nav-item">
+            <a href="index.html" class="header__nav-link">Blog</a>
+          </div>
+          <div class="header__nav-item">
+            <a href="gallery.html" class="header__nav-link">Gallery</a>
+          </div>
+          <div class="header__nav-item">
+            <a href="contacts.html" class="header__nav-link">Contacts</a>
+          </div>
         </nav>
-     </header>
+      </header>
 
-     <main>
-      <section>
-       <h2>русский тойтерьер</h2>
-       <p class="font-style"></p>
-         <nav>
-           <a href="#article-1">Происхождение</a>
-           <a href="#article-2">Внешний вид</a>
-         </nav>
-        <aside>
-          <p class="font-style">—порода собак, относящаяся к группе декоративных собак. Существуют <i>гладкошёрстная</i> и <i>длинношёрстная</i> разновидности.</p>
-        </aside>
+      <!-- основной контент -->
+      <main class="main">
+        <section class="blog">
 
-        <article id="article-1">
-        <h2>Происхождение</h2>
-          <a href="https://ru.wikipedia.org/wiki/Русский_той"target=_blank>ссылка на источник</a>
-      <p class="font-variant">Порода была получена в Москве. В начале XX века одной из самых популярных декоративных собак в России были <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%BE%D0%B9-%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80"target=_blank>английские тойтерьеры</a>, однако в 20—50-е годы их племенное разведение почти не велось из-за <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F"target=_blank>Октябрьской Революции</a>, поскольку эти собаки были привязаны к аристократии и были не одобрены, поэтому поголовье сократилось до критического уровня. С середины 50-х годов XX века российские кинологи взялись за создание породы декоративных собак, подобных тойтерьеру.</p>
+          <article id="article-1" class="blog__post">
+            <div class="blog__post-image" style="background-image: url('img/web-article.jpg'); background-position: top right;"></div>
+            <div class="blog__post-body">
+              <h3 class="blog__post-heading">Введение в веб-разработку</h3>
+              <p class="blog__post-content">
+                Перед тем как делать что-то, нам нужны идеи. Что наш веб-сайт должен фактически делать? По существу, он может делать все, что угодно, но для нашей первой попытки, мы должны придерживаться простых принципов: мы начнем с создания простой веб-страницы, содержащую заголовок и несколько абзацев.
+              </p>
+              <div class="blog__post-more">
+                <a href="article-1.html" class="blog__post-more-link">Читать дальше</a>
+              </div>
+            </div>
+          </article>
 
-      <p class="font-variant">В середине 50-х годов прошлого века ввоз декоративных пород в СССР был минимальным и нецеленаправленным. Существовавшее поголовье, разводимое на собаках, подчас порочных, коренным образом отличалось от своих собратьев за рубежом. Отечественные гладкошёрстные тойтерьеры были счастливым исключением. Удачное смешение небольших по размеру собак советские кинологи закрепили описанием совокупности признаков породной группы. В результате селекционной работы получили гладкошёрстных собак с фенотипом, отличным от английского тойтерьера по многим принципиальным позициям. В 1958 году от скрещивания двух гладкошёрстных родителей был получен первый длинношёрстный тойтерьер.</p>
+          <article id="article-2" class="blog__post">
+            <div class="blog__post-image" style="background-image: url('img/html-article.jpg'); background-position: bottom center;"></div>
+            <div class="blog__post-body">
+              <h3 class="blog__post-heading">Основы HTML</h3>
+              <p class="blog__post-content">
+                Язык HTML был разработан британским учёным Тимом Бернерсом-Ли приблизительно в 1986—1991 годах в стенах ЦЕРНа в Женеве в Швейцарии. HTML создавался как язык для обмена научной и технической документацией, пригодный для использования людьми, не являющимися специалистами в области вёрстки. HTML успешно справлялся с проблемой сложности SGML путём определения небольшого набора структурных и семантических элементов — дескрипторов. Дескрипторы также часто называют «тегами».
+              </p>
+              <div class="blog__post-more">
+                <a href="article-2.html" class="blog__post-more-link">Читать дальше</a>
+              </div>
+            </div>
+          </article>
 
-      <p class="font-variant">В 1996 году в Москве был создан Национальный клуб породы русский тойтерьер. В следующем году клубом была организована первая Всероссийская выставка тойтерьеров.</p>
+          <article id="article-3" class="blog__post">
+            <div class="blog__post-image" style="background-image: url('img/css-article.jpg'); background-position: top left;"></div>
+            <div class="blog__post-body">
+              <h3 class="blog__post-heading">Основы CSS</h3>
+              <p class="blog__post-content">
+                CSS используется создателями веб-страниц для задания цветов, шрифтов, расположения отдельных блоков и других аспектов представления внешнего вида этих веб-страниц. Основной целью разработки CSS являлось разделение описания логической структуры веб-страницы (которое производится с помощью HTML или других языков разметки) от описания внешнего вида этой веб-страницы (которое теперь производится с помощью формального языка CSS).
+              </p>
+              <div class="blog__post-more">
+                <a href="article-2.html" class="blog__post-more-link">Читать дальше</a>
+              </div>
+            </div>
+          </article>
 
-      <p class="font-variant">21 февраля 2006 года на заседании Племенной комиссии FCI было принято решение о признании породы, и её стандарту был присвоен номер 352. По требованию FCI прежние названия пород — <em>московский длинношёрстный тойтерьер</em> и <em>русский гладкошёрстный тойтерьер</em> были заменены на единое название — <strong>русский той</strong>, включая обе разновидности.</p>
+        </section>
+      </main>
 
-      <p class="font-variant">Русский той с 2006 года имеет статус условно (временно) признанной породы. Это означает, что порода не может претендовать на титул CACIB, пока она не будет признана окончательно, что произойдёт не ранее 2016 года. Русские тои, однако, имеют право на другие титулы FCI (Чемпион Европы, Чемпион мира и т. д.) Несмотря на своё маленькое телосложение, русский той терьер ведёт себя очень смело, достойно в любом собачьем коллективе, умело защищает себя и своего хозяина.</p>
-        </article>
+      <!-- боковая навигация -->
+      <aside class="aside">
+        <h2 class="aside__heading">Все статьи:</h2>
+        <nav class="aside__nav">
+          <div class="aside__nav-item">
+            <a href="article-1.html" class="aside__nav-link">Введение в веб-разработку</a>
+          </div>
+          <div class="aside__nav-item">
+            <a href="article-2.html" class="aside__nav-link">Основы HTML</a>
+          </div>
+          <div class="aside__nav-item">
+            <a href="article-3.html" class="aside__nav-link">Основы CSS</a>
+          </div>
+        </nav>
+      </aside>
 
-        <article id="article-2">
-        <h2>Внешний вид</h2>
-      <a href=" https://www.google.ru/search?q=фото+русский+той+терьер&newwindow=1&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwj4nY7jl8PWAhWlNpoKHZFsC34QsAQIJQ&biw=1240&bih=654 "target=_blank>фото</a>
-      <p class="font-weight">Маленькая, элегантная собака, подвижная, высоконогая, с тонким костяком и сухой мускулатурой. Половой тип морфологически выражен слабо, однако ярко заметен в поведении.</p>
-      </article>
+      <!-- подвал -->
+      <footer class="footer">
+        <section class="footer__section">
+          <p class="footer__copyright">© Sava</p>
+          <p class="footer__copyright">All rights reserved</p>
+        </section>
+        <section class="footer__section">
+          <p class="footer__email">E-mail: <a href="mailto:mcs.kate.sava@gmail.com" class="footer__email-link">mcs.kate.sava@gmail.com</a></p>
+        </section>
+      </footer>
 
-    </section>
-  </main>
+    </div>
 
-  <!-- подвал -->
-  <footer class="footer">
-    <p class="footer__copyright">© 2005-2017 Mozilla</p>
-    <p class="footer__copyright">All rights reserved</p>
-    <p class="footer__email">E-mail: <a href="mailto:olga.mikhailova7@mail.ru"></a></p>
-  </footer>
-
-
-
- </body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
